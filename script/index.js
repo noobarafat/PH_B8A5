@@ -44,11 +44,15 @@ for (let index = 0; index < cards.length; index++) {
                 // discount calculation
                 const discountElement = document.getElementById("discountPrice");
                 const discountAmount = totalPrice * 0.2;
-                discountElement.innerText = discountAmount.toFixed(2)
+                discountElement.innerText = discountAmount.toFixed(2);
 
-                // Rest calculation
                 const restTotal = document.getElementById('total');
                 restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+
+                // document.getElementById("input-field").value = "";
+
+
+
 
             } else {
                 alert("Invalid Coupon")
