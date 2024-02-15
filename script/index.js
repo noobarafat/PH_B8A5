@@ -40,11 +40,17 @@ for (let index = 0; index < cards.length; index++) {
 
         const couponCode = couponElement.split(" ").join("").toUpperCase();
         if (totalPrice >= 200) {
-            if (couponCode === "SELL200"){
+            if (couponCode === "SELL200") {
+                // discount calculation
                 const discountElement = document.getElementById("discountPrice");
                 const discountAmount = totalPrice * 0.2;
                 discountElement.innerText = discountAmount.toFixed(2)
-            }else{
+
+                // Rest calculation
+                const restTotal = document.getElementById('total');
+                restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+
+            } else {
                 alert("Invalid Coupon")
             }
 
